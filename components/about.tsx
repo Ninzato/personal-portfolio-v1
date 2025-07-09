@@ -1,10 +1,11 @@
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { IconDownload } from '@tabler/icons-react';
+// import { IconDownload } from '@tabler/icons-react';
 import Image from 'next/image';
 import { HTMLAttributes } from 'react';
 import { GithubLogo } from './icons';
+import Link from 'next/link';
 
 const About = () => {
 	return (
@@ -43,20 +44,28 @@ const About = () => {
 								where I could bring ideas to life and build things that actually
 								help people. That&apos;s when I knew I&apos;d found my path.
 							</p>
-              <p className="mt-2 text-sm text-muted-foreground italic">Fun fact: When you see Ninzato as a username, it&apos;s likely me 🥷</p>
+							<p className="mt-2 text-sm text-muted-foreground italic">
+								Fun fact: When you see Ninzato as a username, it&apos;s likely
+								me 🥷
+							</p>
 						</div>
 						<div className="flex flex-wrap gap-4 justify-start">
-							<Button className="rounded-full">
-								<GithubLogo />
-								View Github
-							</Button>
-							<Button
+							<Link
+								href="https://github.com/Ninzato"
+								target="_blank"
+							>
+								<Button className="rounded-full">
+									<GithubLogo />
+									View Github
+								</Button>
+							</Link>
+							{/* <Button
 								variant="outline"
 								className="rounded-full"
 							>
 								<IconDownload size={16} />
 								Download CV
-							</Button>
+							</Button> */}
 						</div>
 					</div>
 				</div>
