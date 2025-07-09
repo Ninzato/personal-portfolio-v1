@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { Building2, Calendar } from "lucide-react";
+import { IconBuilding, IconCalendar } from "@tabler/icons-react";
 
 interface ExperienceItemProps {
   title: string;
@@ -27,14 +27,14 @@ const ExperienceItem = ({
       <div className="space-y-3">
         <div className="flex items-center gap-3">
           <div className="flex-shrink-0 size-9 bg-accent rounded-full flex items-center justify-center">
-            <Building2 className="size-5 text-muted-foreground" />
+            <IconBuilding className="size-5 text-muted-foreground" />
           </div>
           <span className="text-lg font-semibold">{company}</span>
         </div>
         <div>
           <h3 className="text-xl font-medium">{title}</h3>
           <div className="flex items-center gap-2 mt-1 text-sm">
-            <Calendar className="size-4" />
+            <IconCalendar className="size-4" />
             <span>{period}</span>
           </div>
         </div>
@@ -54,28 +54,28 @@ const ExperienceItem = ({
 const Experience = () => {
   const experiences = [
     {
-      title: "Senior Full Stack Developer",
-      company: "TechCorp Solutions",
-      period: "2021 - Present",
+      title: "Web Developer",
+      company: "Mandaya Royal Hospital Puri",
+      period: "Jan 2025 - Present",
       description:
-        "Led the development of enterprise-scale web applications, mentored junior developers, and implemented best practices for code quality and performance optimization.",
-      technologies: ["React", "Node.js", "TypeScript", "AWS", "MongoDB"],
+        "Maintained and extended a legacy internal system. Developed a new dashboard for hospital staff to manage patient data and medical records, including secure document delivery to patients. Ensured smooth functionality and integration with existing workflows.",
+      technologies: ["Vue", "Keycloak", "TypeScript", "Nginx", "Docker", "Socket.io"],
     },
     {
       title: "Full Stack Developer",
-      company: "Digital Innovations Inc",
-      period: "2019 - 2021",
+      company: "TRWeb Consultant",
+      period: "Apr 2024 - Present",
       description:
-        "Developed and maintained multiple client projects, implemented responsive designs, and integrated third-party APIs for enhanced functionality.",
-      technologies: ["React", "Express.js", "PostgreSQL", "Docker", "Redis"],
+        "Worked closely with a designer to bring websites to life, building landing pages and SaaS marketing sites from scratch using Next.js and Tailwind. Responsible for frontend and backend development, optimization, and deployment to production.",
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Shadcn UI", "Supabase", "Stripe", "Resend", "Vercel"],
     },
     {
       title: "Frontend Developer",
-      company: "WebTech Studios",
+      company: "PostiveLab",
       period: "2018 - 2019",
       description:
-        "Created responsive and interactive user interfaces, collaborated with designers, and optimized application performance.",
-      technologies: ["React", "JavaScript", "SASS", "Webpack", "Jest"],
+        "Collaborated with a backend team to develop a clean and responsive frontend app using various frontend framework. Contributed to UX planning, feature scoping, and frontend architecture to ensure a polished user experience.",
+      technologies: ["React", "Vue", "TypeScript", "Tailwind CSS"],
     },
   ];
 

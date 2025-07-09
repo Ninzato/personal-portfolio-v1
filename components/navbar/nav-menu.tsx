@@ -1,3 +1,5 @@
+"use client";
+
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -6,7 +8,8 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { NavigationMenuProps } from "@radix-ui/react-navigation-menu";
-import Link from "next/link";
+import { scrollToSection } from "@/lib/utils";
+
 
 export const NavMenu = ({ className, ...props }: NavigationMenuProps) => (
   <NavigationMenu
@@ -16,17 +19,32 @@ export const NavMenu = ({ className, ...props }: NavigationMenuProps) => (
     <NavigationMenuList className="gap-1 space-x-0 data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-start">
       <NavigationMenuItem>
         <NavigationMenuLink asChild>
-          <Link href="#about">About</Link>
+          <button
+            onClick={() => scrollToSection('about')}
+            className="text-inherit bg-transparent border-none cursor-pointer p-0"
+          >
+            About
+          </button>
         </NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
         <NavigationMenuLink asChild>
-          <Link href="#experience">Experience</Link>
+          <button
+            onClick={() => scrollToSection('experience')}
+            className="text-inherit bg-transparent border-none cursor-pointer p-0"
+          >
+            Experience
+          </button>
         </NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
         <NavigationMenuLink asChild>
-          <Link href="#projects">Projects</Link>
+          <button
+            onClick={() => scrollToSection('projects')}
+            className="text-inherit bg-transparent border-none cursor-pointer p-0"
+          >
+            Projects
+          </button>
         </NavigationMenuLink>
       </NavigationMenuItem>
     </NavigationMenuList>

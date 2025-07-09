@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { IconExternalLink } from "@tabler/icons-react";
 import Image from "next/image";
 import { GithubLogo } from "./icons";
 
@@ -13,6 +13,7 @@ interface ProjectCardProps {
   githubUrl?: string;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ProjectCard = ({
   title,
   description,
@@ -52,7 +53,7 @@ const ProjectCard = ({
           {liveUrl && (
             <Button variant="default" className="rounded-full" asChild>
               <a href={liveUrl} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="mr-1 h-4 w-4" />
+                <IconExternalLink className="mr-1 h-4 w-4" />
                 Live Demo
               </a>
             </Button>
@@ -76,6 +77,7 @@ const ProjectCard = ({
 };
 
 const Projects = () => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   const projects = [
     {
       title: "E-Commerce Platform",
@@ -123,18 +125,18 @@ const Projects = () => {
             Projects
           </Badge>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">
-            Featured Work
+            Coming Soon..
           </h2>
-          <p className="text-muted-foreground mt-2 sm:mt-4 text-lg">
+          {/* <p className="text-muted-foreground mt-2 sm:mt-4 text-lg">
             Showcasing some of my best projects and technical achievements
-          </p>
+          </p> */}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
