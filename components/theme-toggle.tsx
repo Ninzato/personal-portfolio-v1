@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 export function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -26,11 +26,14 @@ export function ThemeToggle() {
       setTheme("dark");
     } else if (theme === "dark") {
       setTheme("light");
+    } else {
+      // Handle system theme or any other theme
+      setTheme("light");
     }
   };
 
   const getIcon = () => {
-    switch (theme) {
+    switch (resolvedTheme) {
       case "light":
         return <IconBrightness size={20} />;
       case "dark":
