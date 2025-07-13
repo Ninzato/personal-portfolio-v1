@@ -35,14 +35,14 @@ export const metadata: Metadata = {
     description: "Hey there! I'm Ridza — a frontend-focused fullstack developer who enjoys turning ideas into beautiful, user-friendly web apps. I work with React, Next.js, Tailwind CSS, and Supabase.",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://ridzakalimanto.me/og-image.png",
         width: 1200,
         height: 630,
         alt: "Ridza Ninzato - Frontend-Focused Fullstack Developer",
         type: "image/png",
       },
       {
-        url: "/profilePhoto.jpg",
+        url: "https://ridzakalimanto.me/profilePhoto.jpg",
         width: 500,
         height: 500,
         alt: "Ridza Ninzato Profile Photo",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ridza Ninzato - Frontend-Focused Fullstack Developer",
     description: "Frontend-focused fullstack developer building beautiful web experiences with React, Next.js, and Tailwind CSS.",
-    images: ["/og-image.png"],
+    images: ["https://ridzakalimanto.me/og-image.png"],
     creator: "@ninzato",
     site: "@ninzato",
   },
