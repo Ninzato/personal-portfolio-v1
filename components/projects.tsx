@@ -13,7 +13,6 @@ interface ProjectCardProps {
   githubUrl?: string;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ProjectCard = ({
   title,
   description,
@@ -77,43 +76,15 @@ const ProjectCard = ({
 };
 
 const Projects = () => {
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Align CV",
       description:
-        "A full-featured e-commerce platform with real-time inventory management, payment processing, and admin dashboard.",
-      image: "/placeholder.svg",
-      technologies: ["Next.js", "TypeScript", "Stripe", "Prisma", "PostgreSQL"],
-      liveUrl: "https://ecommerce-demo.com",
-      githubUrl: "https://github.com/username/ecommerce",
-    },
-    {
-      title: "AI Task Manager",
-      description:
-        "Smart task management app that uses AI to categorize, prioritize, and suggest optimal task scheduling.",
-      image: "/placeholder.svg",
-      technologies: ["React", "Python", "TensorFlow", "FastAPI", "MongoDB"],
-      liveUrl: "https://ai-taskmanager.com",
-      githubUrl: "https://github.com/username/ai-taskmanager",
-    },
-    {
-      title: "Real-time Chat Application",
-      description:
-        "Feature-rich chat application with real-time messaging, file sharing, and video calls.",
-      image: "/placeholder.svg",
-      technologies: ["React", "Socket.io", "WebRTC", "Node.js", "Redis"],
-      liveUrl: "https://chatapp-demo.com",
-      githubUrl: "https://github.com/username/chat-app",
-    },
-    {
-      title: "AI Image Generator",
-      description:
-        "An AI image generator that uses a model to generate images based on a prompt.",
-      image: "/placeholder.svg",
-      technologies: ["React", "Next.js", "Tailwind CSS", "Shadcn UI"],
-      liveUrl: "https://ai-image-generator.com",
-      githubUrl: "https://github.com/username/ai-image-generator",
+        "An AI-powered CV optimizer made that helps job seekers optimize their CV with AI analysis. It features keyword optimization, multiple export formats, and subscription-based pricing.",
+      image: "/align-cv.png",
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Stripe", "Supabase", "Vercel"],
+      liveUrl: "https://aligncv.com",
+      githubUrl: "",
     },
   ];
 
@@ -124,19 +95,19 @@ const Projects = () => {
           <Badge variant="secondary" className="mb-4">
             Projects
           </Badge>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">
+          {/* <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">
             Coming Soon..
-          </h2>
-          {/* <p className="text-muted-foreground mt-2 sm:mt-4 text-lg">
+          </h2> */}
+          <p className="text-muted-foreground mt-2 sm:mt-4 text-lg">
             Showcasing some of my best projects and technical achievements
-          </p> */}
+          </p>
         </div>
 
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}
-        </div> */}
+        </div>
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { IconMenu2 } from "@tabler/icons-react";
 import { ThemeToggle } from "../theme-toggle";
 import { NavMenu } from "./nav-menu";
@@ -14,7 +14,7 @@ export const NavigationSheet = () => {
       </SheetTrigger>
       <SheetContent className="pt-3 px-6">
         <div className="flex items-center justify-between">
-          <span className="text-lg font-semibold">Menu</span>
+          <SheetTitle className="text-lg font-semibold">Menu</SheetTitle>
           <ThemeToggle />
         </div>
         <NavMenu orientation="vertical" className="mt-12" />
